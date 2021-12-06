@@ -1,0 +1,33 @@
+[
+        {
+            "question":"Cual es la capital de Chile",
+            "possible_answers":
+                [
+                {"text":"jamaica","isCorrect":false},
+                {"text":"montevideo","isCorrect":false},
+                {"text":"santiago","isCorrect":true},
+                {"text":"hola","isCorrect":false}
+                ]
+        },
+        
+        {
+            "question":"De quien es la cancion sweet child o mine",
+            "possible_answers":
+            [
+                {"text":"Soda stereo","isCorrect":false},
+                {"text":"Guns and roses","isCorrect":true},
+                {"text":"Slipknot","isCorrect":false},
+                {"text":"Metallica","isCorrect":false}
+            ]
+        },
+        {
+            "question":"Kiss x sis que es? (no googlees)",
+            "possible_answers":
+            [
+                {"text":"anime","isCorrect":true},
+                {"text":"pelicula","isCorrect":false},
+                {"text":"serie","isCorrect":false},
+                {"text":"banda de rock","isCorrect":false}
+            ]
+        }
+]
