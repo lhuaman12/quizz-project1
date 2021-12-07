@@ -15,7 +15,11 @@ class App extends React.Component{
       <Navbar/>
       <br/>
       <div className="container">
-        <Quizz />
+        <div className="row">
+            <div className="col s6">
+                <Quizz />
+            </div>
+        </div>
       </div>
     </div>
 

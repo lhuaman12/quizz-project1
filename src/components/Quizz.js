@@ -1,7 +1,7 @@
 import React from 'react';
 import QuestionBox from './quizz/QuestionBox';
 import questions from '../examples/questions.json';
-//import Options from './quizz/Options';
+import OptionsBox from './quizz/OptionsBox';
 
 class Quizz extends React.Component{
     
@@ -42,23 +42,15 @@ class Quizz extends React.Component{
     }
 
     showQuestions(){
-      const {index} = this.state;
+      const {index,questions} = this.state;
       return(
-        <div>
-          <div className="row">
-            <div className="col s6">
+  
               <div className="card">
                   <div className="card-content">
-                    <QuestionBox  question={questions[index].question }/>
-                    <div className="collection">
-                      {questions[index].possible_answers.map
-                      (o=>{return <a href="#!" onClick={()=>{this.handleAnswer(o.isCorrect)}} class="collection-item">{o.text}</a>})}
-                    </div>
+                    <QuestionBox question={questions[index].question }/>
+                    <OptionsBox possible_answers = {questions[index].possible_answers} handleAnswer={this.handleAnswer} />
                   </div>
-              </div>
-            </div>
-          </div>
-        </div>
+              </div>    
       );
     }
       
@@ -69,21 +61,17 @@ class Quizz extends React.Component{
         }
         else {
           return( 
-          <div>
-            <div className="row">
-              <div className="col s6">
+            
                 <div className="card">
                   <div className="card-content">
                     <span className="card-title">Quizz finalizado</span>
                     <br/>
                     <p>{"Tu puntuacion es "+ this.state.score}</p>
                     <p>Quieres intentarlo de nuevo?</p>
+                    
                   </div>
                 </div>
-              </div>
-
-            </div>
-          </div>
+          
           )
         }
     }
