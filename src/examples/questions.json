@@ -3,10 +3,10 @@
             "question":"Cual es la capital de Chile",
             "possible_answers":
                 [
-                {"text":"jamaica","isCorrect":false},
-                {"text":"montevideo","isCorrect":false},
-                {"text":"santiago","isCorrect":true},
-                {"text":"hola","isCorrect":false}
+                {"text":"Jamaica","isCorrect":false},
+                {"text":"Montevideo","isCorrect":false},
+                {"text":"Santiago","isCorrect":true},
+                {"text":"Hola","isCorrect":false}
                 ]
         },
         
@@ -21,13 +21,13 @@
             ]
         },
         {
-            "question":"Kiss x sis que es? (no googlees)",
+            "question":"Death note que es? (no googlees)",
             "possible_answers":
             [
-                {"text":"anime","isCorrect":true},
-                {"text":"pelicula","isCorrect":false},
-                {"text":"serie","isCorrect":false},
-                {"text":"banda de rock","isCorrect":false}
+                {"text":"Un anime","isCorrect":true},
+                {"text":"Una pelicula","isCorrect":false},
+                {"text":"Una serie","isCorrect":false},
+                {"text":"Banda de rock","isCorrect":false}
             ]
         }
 ]

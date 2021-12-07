@@ -44,16 +44,19 @@ class Quizz extends React.Component{
     showQuestions(){
       const {index} = this.state;
       return(
-        <div className="row teal lighten-2">
-          <div className="col s8">
-            <QuestionBox question={questions[index].question }/>
-          </div>
-        <br/>
-          <div className="col s8">
-              <div className="collection">
-                {questions[index].possible_answers.map
-                (o=>{return <a href="#!" onClick={()=>{this.handleAnswer(o.isCorrect)}} class="collection-item">{o.text}</a>})}
+        <div>
+          <div className="row">
+            <div className="col s6">
+              <div className="card">
+                  <div className="card-content">
+                    <QuestionBox  question={questions[index].question }/>
+                    <div className="collection">
+                      {questions[index].possible_answers.map
+                      (o=>{return <a href="#!" onClick={()=>{this.handleAnswer(o.isCorrect)}} class="collection-item">{o.text}</a>})}
+                    </div>
+                  </div>
               </div>
+            </div>
           </div>
         </div>
       );
@@ -65,8 +68,21 @@ class Quizz extends React.Component{
           return (this.showQuestions());
         }
         else {
-          return( <div>
-            {"Tu puntuacion es "+ this.state.score}
+          return( 
+          <div>
+            <div className="row">
+              <div className="col s6">
+                <div className="card">
+                  <div className="card-content">
+                    <span className="card-title">Quizz finalizado</span>
+                    <br/>
+                    <p>{"Tu puntuacion es "+ this.state.score}</p>
+                    <p>Quieres intentarlo de nuevo?</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
           )
         }
